@@ -1,0 +1,48 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: lightgray;
+}
+
+header {
+    background-color: darkgray;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container-fluid {
+    background-color: black;
+}
+
+.navbar-brand p {
+    border: groove;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    margin-top: 15px;
+    color: white;
+}
+
+.nav-item p {
+    margin-top: 15px;
+    margin-left: 30px;
+    text-align: center;
+    color: white;
+}
+

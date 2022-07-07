@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MovieWeb.Models.Movies>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+
+<p>
+   @* <a  asp-action="Index">Refresh</a>*@
+</p>
+
+        
+         <a class="btn btn-primary" href="@Url.Action("Index","Movies")">Refresh</a>
+         
+         <br /><br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Director)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="test">
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Director)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseYear)
+            </td>
+            <td>
+              @*  <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |*@
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> 
+              @*  <a asp-action="Delete" asp-route-id="@item.ID">Delete</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
